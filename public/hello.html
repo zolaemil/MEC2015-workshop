@@ -3,11 +3,46 @@
 <head>
   <title>Hello MEItoVexFlow</title>
   <script type="text/JavaScript" src="../node_modules/vexflow/releases/vexflow-debug.js"></script>
+  <script type="text/JavaScript" src="../node_modules/jquery/dist/jquery.min.js"></script>
+  <script type="text/JavaScript" src="../node_modules/meitovexflow/dist/meitovexflow.js"></script>
+
+  <script type="text/JavaScript" src="scripts/loadXMLDoc.js"></script>
+
+  <link rel="sytesheet" href="hello.css"/>
+
+  <script type="application/javascript" language="javascript">
+    $(document).ready( function(){
+      var xmlDoc = window.loadXMLDoc('../xml/hello.xml');
+      var meiScore = xmlDoc.getElementsByTagNameNS("http://www.music-encoding.org/ns/mei", 'score');
+      var canvas = $('canvas')[0],
+          width = $('.hello-meitovexflow').width(),
+          height = null,
+          options = null,
+          callback = null,
+          backend = Vex.Flow.Renderer.Backends.CANVAS;
+
+      var callback = function (calculatedHeight, calculatedWidth) {
+        if (calculatedHeight) {
+          $(canvas).attr('height', calculatedHeight);
+        } else {
+          $(canvas).attr('height', height);
+        }
+
+        if (calculatedWidth) {
+          $(canvas).attr('width', Math.ceil(calculatedWidth));
+        } else {
+          $(canvas).attr('width', width);
+        }
+      };
+
+      MEI2VF.render_notation(meiScore, canvas, width, height, backend, options, callback);
+    })
+  </script>
 </head>
 
 <body>  
   <div class="hello-meitovexflow">
-    Let's say hello to MEItoVexFlow!
+    <canvas width="800" height="600" style="border: 1px solid;"></canvas>
   </div>
 </body>
 </html>
