@@ -4,6 +4,7 @@
   <title>Hello MEItoVexFlow</title>
   <script type="text/JavaScript" src="../node_modules/vexflow/releases/vexflow-debug.js"></script>
   <script type="text/JavaScript" src="../node_modules/jquery/dist/jquery.min.js"></script>
+  <script type="text/JavaScript" src="../node_modules/meitovexflow/dist/meitovexflow.js"></script>
   <script type="text/JavaScript" src="scripts/loadXMLDoc.js"></script>
 
   <script type="application/javascript" language="javascript">
@@ -11,14 +12,21 @@
       var xmlDoc = window.loadXMLDoc('../xml/hello.xml');
       var meiScore = xmlDoc.getElementsByTagNameNS("http://www.music-encoding.org/ns/mei", 'score');
 
-      console.log(meiScore);
+      var canvas = $('canvas')[0],
+          width = null,
+          height = null,
+          options = null,
+          callback = null,
+          backend = Vex.Flow.Renderer.Backends.CANVAS;
+
+      MEI2VF.render_notation(meiScore, canvas, width, height, backend, options, callback);
     })
   </script>
 </head>
 
 <body>  
   <div class="hello-meitovexflow">
-    Let's say hello to MEItoVexFlow!
+    <canvas width="800" height="600" style="border: 1px solid;"></canvas>
   </div>
 </body>
 </html>
