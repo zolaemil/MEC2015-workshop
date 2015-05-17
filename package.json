@@ -1,0 +1,12 @@
+{
+  "description": "MEC 2015 workshop material for MEItoVexFlow session",
+  "dependencies": {
+    "grunt": "~0.4.4",
+    "vexflow": "1.2.27",
+    "meitovexflow": "../m2v"
+  },
+  "devDependencies": {
+    "grunt-contrib-connect": "~0.7.1",
+    "grunt-contrib-watch": "~0.5.3"
+  }
+}
