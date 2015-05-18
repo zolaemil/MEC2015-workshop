@@ -46,11 +46,11 @@
             <measure xml:id="m-1ed79dca-4d21-44b2-88dc-af0ae7f2acee" n="1">
               <staff xml:id="m-809c84d0-5a7d-497c-9d96-dfa98fdd8423" n="1">
                 <layer xml:id="m-95792493-d4ad-49b7-a41d-ebe143d8a83b" n="1">
-                  <app xml:id="m-85097fe9-ea2d-4bdc-acec-299be3a02c58">
+                  <app xml:id="app-01">
                     <lem xml:id="m-dd111df6-1bb2-473d-8248-8743f15a03cf">
                       <rest xml:id="m-ad2583ed-ff45-4a3d-a8a3-42641edf60b1" dur="2"/>
                     </lem>
-                    <rdg xml:id="m-798c3911-bdeb-49ff-a86f-fb5d2655fff7" source="#ZK">
+                    <rdg xml:id="rdg-01" source="#Source-A">
                       <note xml:id="m-bac671a4-30f4-42f0-be5d-857f20115c68" dur="2" oct="4" pname="f" color="rgba(255,0,0,1)"/>
                     </rdg>
                   </app>
@@ -64,15 +64,15 @@
               <staff xml:id="m-ba3abdb8-b5b8-4fce-9485-c8f1612f8cf7" n="1">
                 <layer xml:id="m-10bcc920-2cfa-4556-b0af-15c8ef4c46d2" n="1">
                   <note xml:id="m-78695bd6-17f7-4db3-98d6-fa3c4ae7507d" dur="2" oct="4" pname="f"/>
-                  <app xml:id="m-e9930832-f14c-497f-93ff-fc19d254e99b">
+                  <app xml:id="app-02">
                     <lem xml:id="m-597ebe94-7351-4059-8f97-d06e3b8d9813">
                       <note xml:id="m-5db456a5-e963-43f3-bbaf-cd21fd7c65ae" dur="2" oct="4" pname="f"/>
                       <note xml:id="m-d7b9d362-9a9d-4bde-9922-aba6e8aaa71e" dur="2" oct="4" pname="f"/>
                     </lem>
-                    <rdg xml:id="m-3bdc0ff9-68bc-4fad-b897-e78bc64ae90b" source="#Source-A">
+                    <rdg xml:id="rdg-02" source="#Source-A">
                       <rest xml:id="m-a6fa9c4f-1bc6-4a7e-ab72-0a8089f162b5" dur="1" color="rgba(255,0,0,1)"/>
                     </rdg>
-                    <rdg xml:id="m-3bdc0ff9-68bc-4fad-b897-e78bc64ae90b" source="#Source-B">
+                    <rdg xml:id="rdg-03" source="#Source-B">
                       <rest xml:id="0001" dur="2" color="rgba(255,0,0,1)"/>
                       <rest xml:id="0002" dur="2" color="rgba(255,0,0,1)"/>
                     </rdg>
@@ -87,14 +87,14 @@
                   <note xml:id="m-6af90df5-1f8b-4b9c-94b9-d71f5db43552" dur="2" oct="4" pname="a"/>
                   <note xml:id="m-5cbc0d74-e0e7-4066-8180-795f1a55c8ab" dur="2" oct="4" pname="b"/>
                   <note xml:id="m-caddcbc1-431f-4794-b179-8ab8ba9bf8af" dur="2" oct="4" pname="c"/>
-                  <app xml:id="m-a33111c0-ad8a-4fb9-a485-4348decc84d9">
+                  <app xml:id="app-03">
                     <lem xml:id="m-3ca2802f-725c-49e9-84d0-99a5847bf5a2">
                       <note xml:id="m-4dc5dc72-9376-419e-923e-58d9e70a8d1c" dur="2" oct="4" pname="d"/>
                     </lem>
-                    <rdg xml:id="m-b7e3eb95-352d-43fa-871e-a1f4a244fbbb" source="#Source-A">
+                    <rdg xml:id="rdg-04" source="#Source-A">
                       <note xml:id="m-14931614-7527-407e-a51b-4c9776e40c3d" dur="2" oct="4" pname="g" color="rgba(255,0,0,1)"/>
                     </rdg>
-                    <rdg xml:id="m-b7e3eb95-352d-43fa-871e-a1f4a244fbbb" source="#Source-B">
+                    <rdg xml:id="rdg-05" source="#Source-B">
                       <note xml:id="m-14931614-7527-407e-a51b-4c9776e40c3d" dur="2" oct="5" pname="g" color="rgba(255,0,0,1)"/>
                       <note xml:id="m-14931614-7527-407e-a51b-4c9776e40c3d" dur="2" oct="5" pname="g" color="rgba(255,0,0,1)"/>
                     </rdg>

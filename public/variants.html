@@ -50,6 +50,12 @@
       
       var numberOfMeasures = $(richScore).find('measure').length;
 
+      var sectionplaneUpdate = {};
+      sectionplaneUpdate["app-01"] = "rdg-01";
+      // sectionplaneUpdate["app-02"] = "rdg-02";
+      sectionplaneUpdate["app-03"] = "rdg-05";
+      meiDoc.updateSectionView(sectionplaneUpdate);
+
       var sectionViewSlice = meiDoc.getSectionViewSlice({start_n: 1, end_n: numberOfMeasures});
       
       var meiScore = sectionViewSlice;
