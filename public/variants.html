@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Handle</title>
+  <script type="text/JavaScript" src="../node_modules/vexflow/releases/vexflow-debug.js"></script>
+  <script type="text/JavaScript" src="../node_modules/jquery/dist/jquery.min.js"></script>
+  <script type="text/JavaScript" src="../node_modules/meitovexflow/dist/meitovexflow.js"></script>
+  <script type="text/JavaScript" src="scripts/loadXMLDoc.js"></script>
+  
+  <script type="application/javascript" language="javascript">
+    var MeiLib = window.MeiLib;
+
+    var loadMEIDoc = function(filename, options) {
+      var xmlDoc = window.loadXMLDoc(filename);
+      var meiDoc = new MeiLib.MeiDoc(xmlDoc);
+
+      return meiDoc;
+    };
+
+    var createCallback = function(canvas, width, height) {
+      var callback = function(calculatedHeight, calculatedWidth) {
+        if (calculatedHeight) {
+          $(canvas).attr('height', calculatedHeight);
+        } else {
+          $(canvas).attr('height', height);
+        }
+
+        if (calculatedWidth) {
+          $(canvas).attr('width', Math.ceil(calculatedWidth));
+        } else {
+          $(canvas).attr('width', width);
+        }
+      };
+
+      return callback;
+    };
+
+    var displaySourceList = function(ul, meiDoc) {
+      var sourceList = meiDoc.sources;
+      sourceList.forEach(function(sourceItem) {
+        var sourceId = $(sourceItem).attr('xml:id');
+        var liHtml = '<li>' + sourceId + '</id>';
+        $(ul).append(liHtml);
+      });
+    };
+
+    $(document).ready(function() {
+      var meiDoc = loadMEIDoc('../xml/variants.xml');
+      var richScore = meiDoc.getRichScore();
+      
+      var numberOfMeasures = $(richScore).find('measure').length;
+
+      var sectionplaneUpdate = {};
+      sectionplaneUpdate["app-01"] = "rdg-01";
+      // sectionplaneUpdate["app-02"] = "rdg-02";
+      sectionplaneUpdate["app-03"] = "rdg-05";
+      meiDoc.updateSectionView(sectionplaneUpdate);
+
+      var sectionViewSlice = meiDoc.getSectionViewSlice({start_n: 1, end_n: numberOfMeasures});
+      
+      var meiScore = sectionViewSlice;
+
+      var canvas = $('canvas')[0],
+          width = $('.meitovexflow').width(),
+          height = null,
+          options = null,
+          callback = null,
+          backend = Vex.Flow.Renderer.Backends.CANVAS;
+
+      callback = createCallback(canvas, width, height);
+
+      MEI2VF.render_notation(meiScore, canvas, width, height, backend, options, callback);
+
+      var ulSources = $('ul#sources');
+      
+      displaySourceList(ulSources, meiDoc);
+    })
+  </script>
+</head>
+
+<body>  
+  <div class="meitovexflow">
+    <canvas width="800" height="600" style="border: 1px solid;"></canvas>
+    <ul id="sources"></ul>
+  </div>
+</body>
+</html>
