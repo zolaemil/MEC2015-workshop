@@ -11,7 +11,8 @@
         </availability>
       </pubStmt>
       <sourceDesc xml:id="m-fa98915c-bfd8-4aee-8ec6-ff7734db439b">
-        <source xml:id="ZK"/>
+        <source xml:id="Source-A"/>
+        <source xml:id="Source-B"/>
       </sourceDesc>
     </fileDesc>
     <workDesc xml:id="m-9b844b36-4d2c-40aa-ba48-1cfd9d5baeba">
@@ -68,8 +69,12 @@
                       <note xml:id="m-5db456a5-e963-43f3-bbaf-cd21fd7c65ae" dur="2" oct="4" pname="f"/>
                       <note xml:id="m-d7b9d362-9a9d-4bde-9922-aba6e8aaa71e" dur="2" oct="4" pname="f"/>
                     </lem>
-                    <rdg xml:id="m-3bdc0ff9-68bc-4fad-b897-e78bc64ae90b" source="#ZK">
+                    <rdg xml:id="m-3bdc0ff9-68bc-4fad-b897-e78bc64ae90b" source="#Source-A">
                       <rest xml:id="m-a6fa9c4f-1bc6-4a7e-ab72-0a8089f162b5" dur="1" color="rgba(255,0,0,1)"/>
+                    </rdg>
+                    <rdg xml:id="m-3bdc0ff9-68bc-4fad-b897-e78bc64ae90b" source="#Source-B">
+                      <rest xml:id="0001" dur="2" color="rgba(255,0,0,1)"/>
+                      <rest xml:id="0002" dur="2" color="rgba(255,0,0,1)"/>
                     </rdg>
                   </app>
                   <note xml:id="m-196374f5-dde1-439e-a2ce-5c410209a3b2" dur="2" oct="4" pname="f"/>
@@ -86,8 +91,12 @@
                     <lem xml:id="m-3ca2802f-725c-49e9-84d0-99a5847bf5a2">
                       <note xml:id="m-4dc5dc72-9376-419e-923e-58d9e70a8d1c" dur="2" oct="4" pname="d"/>
                     </lem>
-                    <rdg xml:id="m-b7e3eb95-352d-43fa-871e-a1f4a244fbbb" source="#ZK">
+                    <rdg xml:id="m-b7e3eb95-352d-43fa-871e-a1f4a244fbbb" source="#Source-A">
                       <note xml:id="m-14931614-7527-407e-a51b-4c9776e40c3d" dur="2" oct="4" pname="g" color="rgba(255,0,0,1)"/>
+                    </rdg>
+                    <rdg xml:id="m-b7e3eb95-352d-43fa-871e-a1f4a244fbbb" source="#Source-B">
+                      <note xml:id="m-14931614-7527-407e-a51b-4c9776e40c3d" dur="2" oct="5" pname="g" color="rgba(255,0,0,1)"/>
+                      <note xml:id="m-14931614-7527-407e-a51b-4c9776e40c3d" dur="2" oct="5" pname="g" color="rgba(255,0,0,1)"/>
                     </rdg>
                   </app>
                 </layer>

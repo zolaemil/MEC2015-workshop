@@ -33,7 +33,16 @@
       };
 
       return callback;
-    }
+    };
+
+    var displaySourceList = function(ul, meiDoc) {
+      var sourceList = meiDoc.sources;
+      sourceList.forEach(function(sourceItem) {
+        var sourceId = $(sourceItem).attr('xml:id');
+        var liHtml = '<li>' + sourceId + '</id>';
+        $(ul).append(liHtml);
+      });
+    };
 
     $(document).ready(function() {
       var meiDoc = loadMEIDoc('../xml/variants.xml');
@@ -55,6 +64,10 @@
       callback = createCallback(canvas, width, height);
 
       MEI2VF.render_notation(meiScore, canvas, width, height, backend, options, callback);
+
+      var ulSources = $('ul#sources');
+      
+      displaySourceList(ulSources, meiDoc);
     })
   </script>
 </head>
@@ -62,6 +75,7 @@
 <body>  
   <div class="meitovexflow">
     <canvas width="800" height="600" style="border: 1px solid;"></canvas>
+    <ul id="sources"></ul>
   </div>
 </body>
 </html>
