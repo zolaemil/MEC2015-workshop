@@ -3,7 +3,7 @@
   "dependencies": {
     "grunt": "~0.4.4",
     "vexflow": "1.2.27",
-    "meitovexflow": "../m2v"
+    "meitovexflow": "../MEItoVexFlow"
   },
   "devDependencies": {
     "grunt-contrib-connect": "~0.7.1",
